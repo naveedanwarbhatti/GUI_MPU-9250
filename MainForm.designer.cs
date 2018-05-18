@@ -42,7 +42,6 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.baudRateComboBox = new System.Windows.Forms.ComboBox();
-            this.serialSettingsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataBitsComboBox = new System.Windows.Forms.ComboBox();
             this.parityComboBox = new System.Windows.Forms.ComboBox();
             this.portNameComboBox = new System.Windows.Forms.ComboBox();
@@ -93,12 +92,12 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.serialSettingsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             baudRateLabel = new System.Windows.Forms.Label();
             dataBitsLabel = new System.Windows.Forms.Label();
             parityLabel = new System.Windows.Forms.Label();
             portNameLabel = new System.Windows.Forms.Label();
             stopBitsLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.serialSettingsBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -106,6 +105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serialSettingsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // baudRateLabel
@@ -161,10 +161,6 @@
             this.baudRateComboBox.Name = "baudRateComboBox";
             this.baudRateComboBox.Size = new System.Drawing.Size(121, 21);
             this.baudRateComboBox.TabIndex = 2;
-            // 
-            // serialSettingsBindingSource
-            // 
-            this.serialSettingsBindingSource.DataSource = typeof(SerialPortListener.Serial.SerialSettings);
             // 
             // dataBitsComboBox
             // 
@@ -822,6 +818,10 @@
             this.chart4.TabIndex = 84;
             this.chart4.Text = "chart4";
             // 
+            // serialSettingsBindingSource
+            // 
+            this.serialSettingsBindingSource.DataSource = typeof(SerialPortListener.Serial.SerialSettings);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -839,9 +839,9 @@
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
-            this.Text = "Wireless Sensor Nodes";
-            ((System.ComponentModel.ISupportInitialize)(this.serialSettingsBindingSource)).EndInit();
+            this.Text = "MPU-9250 GUI";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -852,6 +852,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serialSettingsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
